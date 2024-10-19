@@ -14,6 +14,27 @@
   }
 }
 
+@media (min-width: 640px) {
+  /* sm */
+  :root {
+    --background: #ff4d4d; /* 예시 색상 */
+  }
+}
+
+@media (min-width: 768px) {
+  /* md */
+  :root {
+    --background: #fca21c; /* 예시 색상 */
+  }
+}
+
+@media (min-width: 1024px) {
+  /* lg */
+  :root {
+    --background: #f0ff1d; /* 예시 색상 */
+  }
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
