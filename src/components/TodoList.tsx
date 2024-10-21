@@ -83,28 +83,26 @@ const TodoList = () => {
                 todos
                   .filter((todo) => !todo.isCompleted)
                   .map((todo) => (
-                    <Link key={todo.id} href={`/items/${todo.id}`}>
-                      <div
-                        key={todo.id}
-                        className="w-full h-12 pl-4 flex flex-row rounded-full items-center justify-start gap-5 border-black border-2 bg-white"
-                      >
-                        <Image
-                          src={
-                            todo.isCompleted
-                              ? checkButtonTrue
-                              : checkButtonFalse
-                          }
-                          alt={
-                            todo.isCompleted
-                              ? "check-button-true"
-                              : "check-button-false"
-                          }
-                          className="w-8 h-8 cursor-pointer"
-                          onClick={() => toggleTodoHandler(todo.id)}
-                        />
-                        {todo.name}
-                      </div>
-                    </Link>
+                    <div
+                      key={todo.id}
+                      className="w-full h-12 pl-4 flex flex-row rounded-full items-center justify-start gap-5 border-black border-2 bg-white"
+                    >
+                      <Image
+                        src={
+                          todo.isCompleted ? checkButtonTrue : checkButtonFalse
+                        }
+                        alt={
+                          todo.isCompleted
+                            ? "check-button-true"
+                            : "check-button-false"
+                        }
+                        className="w-8 h-8 cursor-pointer"
+                        onClick={() => toggleTodoHandler(todo.id)}
+                      />
+                      <Link href={`/items/${todo.id}`}>
+                        <span>{todo.name}</span>
+                      </Link>
+                    </div>
                   ))
               ) : (
                 <>
@@ -144,7 +142,9 @@ const TodoList = () => {
                         className="w-8 h-8 cursor-pointer"
                         onClick={() => toggleTodoHandler(todo.id)}
                       />
-                      <span className="line-through">{todo.name}</span>
+                      <Link href={`/items/${todo.id}`}>
+                        <span className="line-through">{todo.name}</span>
+                      </Link>
                     </div>
                   ))
               ) : (
