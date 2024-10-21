@@ -83,7 +83,7 @@ const TodoList = () => {
                 todos
                   .filter((todo) => !todo.isCompleted)
                   .map((todo) => (
-                    <Link href={`/items/${todo.id}`}>
+                    <Link key={todo.id} href={`/items/${todo.id}`}>
                       <div
                         key={todo.id}
                         className="w-full h-12 pl-4 flex flex-row rounded-full items-center justify-start gap-5 border-black border-2 bg-white"
