@@ -1,5 +1,5 @@
 import Link from "next/link";
-import navbarLogoImage from "../assets/image/navbar-logo.png";
+import navbarLogoImage from "../../public/assets/image/navbar-logo.png";
 import Image from "next/image";
 
 const Navbar = () => {

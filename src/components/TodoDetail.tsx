@@ -5,13 +5,13 @@ import { useRouter, useParams } from "next/navigation";
 import { getTodoDetails, updateTodo, deleteTodo } from "../app/api/api";
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import checkButtonTrue from "../../../assets/image/check-button-true.png";
-import checkButtonFalse from "../../../assets/image/check-button-false.png";
-import checkIcon from "../../../assets/image/check.png";
-import XIcon from "../../../assets/image/X.png";
-import imgIcon from "../../../assets/image/imgIcon.png";
-import plusIcon from "../../../assets/image/plus.png";
-import memoBg from "../../../assets/image/memo.png";
+import checkButtonTrue from "../../public/assets/image/check-button-true.png";
+import checkButtonFalse from "../../public/assets/image/check-button-false.png";
+import checkIcon from "../../public/assets/image/check.png";
+import XIcon from "../../public/assets/image/X.png";
+import imgIcon from "../../public/assets/image/imgIcon.png";
+import plusIcon from "../../public/assets/image/plus.png";
+import memoBg from "../../public/assets/image/memo.png";
 
 const TodoDetail = () => {
   const router = useRouter();

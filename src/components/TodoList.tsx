@@ -3,10 +3,10 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import checkButtonTrue from "../assets/image/check-button-true.png";
-import checkButtonFalse from "../assets/image/check-button-false.png";
-import emptyTodo from "../assets/image/empty_todo.png";
-import emptyDone from "../assets/image/empty_done.png";
+import checkButtonTrue from "../../public/assets/image/check-button-true.png";
+import checkButtonFalse from "../../public/assets/image/check-button-false.png";
+import emptyTodo from "../../public/assets/image/empty_todo.png";
+import emptyDone from "../../public/assets/image/empty_done.png";
 import { TTodo } from "@/app/types/types";
 import api from "@/app/api/api";
 
