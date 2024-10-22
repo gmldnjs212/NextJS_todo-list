@@ -5,13 +5,13 @@ import { useRouter, useParams } from "next/navigation";
 import { getTodoDetails, updateTodo, deleteTodo } from "../app/api/api";
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import checkButtonTrue from "../../public/assets/image/check-button-true.png";
-import checkButtonFalse from "../../public/assets/image/check-button-false.png";
-import checkIcon from "../../public/assets/image/check.png";
-import XIcon from "../../public/assets/image/X.png";
-import imgIcon from "../../public/assets/image/imgIcon.png";
-import plusIcon from "../../public/assets/image/plus.png";
-import memoBg from "../../public/assets/image/memo.png";
+import checkButtonTrue from "../../public/image/check-button-true.png";
+import checkButtonFalse from "../../public/image/check-button-false.png";
+import checkIcon from "../../public/image/check.png";
+import XIcon from "../../public/image/X.png";
+import imgIcon from "../../public/image/imgIcon.png";
+import plusIcon from "../../public/image/plus.png";
+import memoBg from "../../public/image/memo.png";
 
 const TodoDetail = () => {
   const router = useRouter();
@@ -50,11 +50,12 @@ const TodoDetail = () => {
 
   useEffect(() => {
     if (todo) {
+      const nameCheck = todo.name !== name;
       const memoCheck = todo.memo !== memo;
       const imgCheck = todo.imageUrl !== imageUrl && imageUrl !== null;
-      setEditStatus(memoCheck || imgCheck);
+      setEditStatus(nameCheck || memoCheck || imgCheck);
     }
-  }, [memo, imageUrl]);
+  }, [name, memo, imageUrl]);
 
   // Todo 수정하기
   const handleUpdate = async () => {
