@@ -1,4 +1,4 @@
-import TodoList from "@/components/TodoList";
+import TodoList from "@/containers/TodoList";
 
 const Page = () => {
   return (
