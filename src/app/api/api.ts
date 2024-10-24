@@ -29,8 +29,8 @@ export const updateTodo = async (
   data: {
     name?: string;
     memo?: string;
-    isCompleted?: boolean;
     imageUrl?: string;
+    isCompleted?: boolean;
   }
 ) => {
   const response = await api.patch(`/items/${itemId}`, data);

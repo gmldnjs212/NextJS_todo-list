@@ -3,6 +3,6 @@ export type TTodo = {
   tenantId: string;
   name: string;
   memo: string;
-  imageUrl?: string;
+  todoImage?: string;
   isCompleted: boolean;
 };
