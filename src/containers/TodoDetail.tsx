@@ -175,7 +175,7 @@ const TodoDetail = () => {
             <div className="w-[384px] h-[311px] relative border-dashed border-2 border-slate-500 bg-slate-300 rounded-xl flex justify-center items-center">
               {/* 해당 todo에 이미지url이 없다면 이미지 업로드를 할 수 있는 UI를 보여줌 */}
               {!imageUrl ? (
-                <>
+                <div className="w-full h-full flex items-center justify-center relative">
                   <input
                     type="file"
                     accept="image/*"
@@ -185,7 +185,7 @@ const TodoDetail = () => {
                   />
                   <Image src={imgIcon} alt="img-icon" />
                   <button
-                    className="absoltue right-5 bottom-5 bg-[#e2e8f0] rounded-full p-4"
+                    className="absolute right-5 bottom-5 bg-[#e2e8f0] rounded-full p-4"
                     onClick={(e) => {
                       e.preventDefault(); // 기본 동작은 방지처리
                       fileInput.current?.click(); // input 클릭 트리거
@@ -193,7 +193,7 @@ const TodoDetail = () => {
                   >
                     <Image src={plusIcon} alt="plus-icon" />
                   </button>
-                </>
+                </div>
               ) : (
                 <>
                   {/* 해당 todo에 이미지url이 이미있다면 해당 이미지를 보여줌 */}
