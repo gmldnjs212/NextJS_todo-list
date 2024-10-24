@@ -43,7 +43,7 @@ const TodoDetail = () => {
         setTodo(data);
         setName(data.name);
         setMemo(data.memo || "");
-        setImageUrl(data.imageUrl || "");
+        setImageUrl(data.imageUrl || undefined);
       } catch (error) {
         console.error("[에러] fetching todo details failed :", error);
       } finally {
@@ -61,6 +61,7 @@ const TodoDetail = () => {
       const nameCheck = todo.name !== name;
       const memoCheck = todo.memo !== memo;
       const imgCheck = todo.todoImage !== imageUrl && imageUrl !== null;
+
       // 변경사항 상태관리를 하는 state에 true를 set함
       setEditStatus(nameCheck || memoCheck || imgCheck);
     }
