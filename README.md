@@ -31,8 +31,10 @@ https://next-js-todo-list-lovat-rho.vercel.app/
 - todo 토글 ( 완료 <-> 미완료 )
 - todo 삭제
 - todo 수정
+  - todo 상세페이지에서 제목 수정
+  - todo 상세페이지에서 이미지 추가
+  - todo 상세페이지에서 메모 추가 및 수정
 - todo 상세페이지 라우팅
-- todo memo 작성/수정
 
   <br/>
 
