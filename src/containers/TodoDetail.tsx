@@ -25,9 +25,7 @@ const TodoDetail = () => {
   const [todo, setTodo] = useState<TTodo | null>(null);
   const [name, setName] = useState<string>("");
   const [memo, setMemo] = useState<string>("");
-  const [imageUrl, setImageUrl] = useState<string>(
-    "../../public/image/imgIcon.png"
-  );
+  const [imageUrl, setImageUrl] = useState<string>("");
   const [loading, setLoading] = useState<boolean | null>(true);
   const [editStatus, setEditStatus] = useState(false);
   const fileInput = useRef<HTMLInputElement | null>(null);
@@ -66,7 +64,7 @@ const TodoDetail = () => {
       // 변경사항 상태관리를 하는 state에 true를 set함
       setEditStatus(nameCheck || memoCheck || imgCheck);
     }
-  }, [name, memo, imageUrl]);
+  }, [name, memo, imageUrl, todo]);
 
   // todo 수정하기
   const handleUpdate = async () => {
@@ -105,7 +103,11 @@ const TodoDetail = () => {
     // 이미지 유효성검증
     // - 영어 파일명만 가능
     // - 5mb 미만의 크기만 가능
-    validateImage;
+    const isVaildImage = validateImage(file);
+    if (!isVaildImage) {
+      alert("유효하지 않은 이미지입니다.");
+      return;
+    }
 
     // 선택한 이미지 미리보기
     const reader = new FileReader();
